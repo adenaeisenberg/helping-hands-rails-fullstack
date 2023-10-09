@@ -1,0 +1,9 @@
+<%# <h1>Opportunity</h1> %>
+<h1><%= @opportunity.title %></h1>
+<p>Description: <%= @opportunity.description %></p>
+<p>Date: <%= @opportunity.date.strftime("%B %-d, %Y")
+ %></p>
+<a href="/opportunities/<%= @opportunity.id %>/edit">Edit This Opportunity</a>
+<br> 
+<br> 
+<a href="/opportunities">Back to All Opportunities</a>

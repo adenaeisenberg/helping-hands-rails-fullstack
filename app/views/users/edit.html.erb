@@ -1,0 +1,30 @@
+<h1>Edit User</h1>
+<form method="post" action="/users/<%= @user.id %>">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Name </label>
+    <input type="text" name="user[name]" value="<%= @user.name %>">
+  </div>
+  <div>
+    <label>Email </label>
+    <input type="text" name="user[email]" value="<%= @user.email %>">
+  </div>
+  <div>
+    <label>Bio </label>
+    <input type="text" name="user[bio]" value="<%= @user.bio %>">
+  </div>
+  <div>
+    <label>DOB </label>
+    <input type="text" name="user[dob]" value="<%= @user.dob %>">
+  </div>
+  <div>
+    <label>Phone Number </label>
+    <input type="text" name="user[phone_number]" value="<%= @user.phone_number %>">
+  </div>
+  <div>
+    <input type="submit" value="Update user">
+  </div>
+</form>
+<br>
+<a href="/users">Don't want to edit this user? Click here to go back to all users</a>

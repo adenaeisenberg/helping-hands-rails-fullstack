@@ -1,0 +1,22 @@
+<h1>Edit Opportunity</h1>
+<form method="post" action="/opportunities/<%= @opportunity.id %>">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Title </label>
+    <input type="text" name="opportunity[title]" value="<%= @opportunity.title %>">
+  </div>
+  <div>
+    <label>Description </label>
+    <input type="text" name="opportunity[description]" value="<%= @opportunity.description %>">
+  </div>
+  <div>
+    <label>Date </label>
+    <input type="text" name="opportunity[date]" value="<%= @opportunity.date %>">
+  </div>
+  <div>
+    <input type="submit" value="Update opportunity">
+  </div>
+</form>
+<br> 
+<a href="/opportunities">Don't want to edit this opportunity? Click here to get back to All Opportunities</a>
